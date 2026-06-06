@@ -11,4 +11,27 @@ TrueEcho shifts reviews to an immutable **Proof-of-Transaction** framework. If a
 
 ## 🏗️ System Architecture Overview
 
-The TrueEcho Flow: From Payment to BlockchainStep 1: The Transaction (The Input)Users buy items online or in person through existing payment gateways.🛒 Online Checkouts: Medusa, Shopify, WooCommerce webhooks.🏪 Brick-&-Mortar Retail: Square, Clover, or Smart Receipts via NFC/QR.Step 2: Processing (The Data Normalisation)Both checkout streams feed into a unified data converter.➡️ The transaction details hit the TrueEcho Unified Schema Listener.➡️ The listener strips all private customer data and turns the receipt into an anonymous cryptographic hash.Step 3: The Ledger (The Lock)The protocol records the transaction on a cheap blockchain network.⛓️ Data hits the Base / Optimism Layer-2 Ledger.🎟️ The ledger automatically mints an unspent, single-use Review Token (NFT).Step 4: The Forking Paths (Honest User vs. Attacker)Depending on whether a user has a valid transaction token, the system reacts in one of two ways:Path A: The Honest Customer ✅User types an honest review.Zero-Knowledge Proof (ZKP) Verification Passes (The ledger proves they bought the item without revealing who they are).The review text is committed permanently to the blockchain.Financial reward tokens are instantly released to the user's wallet.Path B: The Bot, Troll, or Competitor ❌A malicious user attempts to spam the system or submit a fake review.The user has no cryptographic transaction token.The Blockchain Ledger Automatically Blocks the Post.The review vanishes and never reaches the website.If you'd like, we can outline the exact visual screens a customer sees on their phone when they transition from tapping their card to typing the review. Would that help you design the frontend layouts?
+The TrueEcho Flow: From Payment to BlockchainStep 1: The Transaction (The Input)
+Users buy items online or in person through existing payment gateways.
+🛒 Online Checkouts: Medusa, Shopify, WooCommerce webhooks.
+🏪 Brick-&-Mortar Retail: Square, Clover, or Smart Receipts via NFC/QR.
+Step 2: Processing (The Data Normalisation)
+Both checkout streams feed into a unified data converter.
+➡️ The transaction details hit the TrueEcho Unified Schema Listener.
+➡️ The listener strips all private customer data and turns the receipt into an anonymous cryptographic hash.
+Step 3: The Ledger (The Lock)
+The protocol records the transaction on a cheap blockchain network.
+⛓️ Data hits the Base / Optimism Layer-2 Ledger.
+🎟️ The ledger automatically mints an unspent, single-use Review Token (NFT).
+Step 4: The Forking Paths (Honest User vs. Attacker)
+Depending on whether a user has a valid transaction token, the system reacts in one of two ways:
+Path A: The Honest Customer ✅
+User types an honest review.
+Zero-Knowledge Proof (ZKP) Verification Passes (The ledger proves they bought the item without revealing who they are).
+The review text is committed permanently to the blockchain.
+Financial reward tokens are instantly released to the user's wallet.
+Path B: The Bot, Troll, or Competitor ❌
+A malicious user attempts to spam the system or submit a fake review.
+The user has no cryptographic transaction token.
+The Blockchain Ledger Automatically Blocks the Post.
+The review vanishes and never reaches the website.
